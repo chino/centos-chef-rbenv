@@ -3,7 +3,7 @@
 Installs a recent version of ruby to centos 5.9 and 6.4 using the rbenv
 cookbook.
 
-See: cookbooks/rbenv-wrapper/recipes/default.rb
+See: [cookbooks/rbenv-wrapper/recipes/default.rb](cookbooks/rbenv-wrapper/recipes/default.rb)
 
 # Notes
 
