@@ -9,10 +9,13 @@ See: cookbooks/rbenv-wrapper/recipes/default.rb
 
 You must install the vagrant-berkshelf plugin: http://berkshelf.com/
 
-	`vagrant plugin install vagrant-berkshelf --plugin-version 2.0.1`
+```vagrant plugin install vagrant-berkshelf --plugin-version 2.0.1```
 
 Note I had to apply this patch to get it working correctly:
 
-	https://github.com/berkshelf/vagrant-berkshelf/pull/195
+https://github.com/berkshelf/vagrant-berkshelf/pull/195
 
-	sed -i 's/cookbooks_path /&+/g' ~/.vagrant.d/gems/gems/vagrant-berkshelf-2.0.1/lib/berkshelf/vagrant/action/configure_chef.rb
+```
+sed -i 's/cookbooks_path /&+/g' \
+  ~/.vagrant.d/gems/gems/vagrant-berkshelf-2.0.1/lib/berkshelf/vagrant/action/configure_chef.rb
+```
