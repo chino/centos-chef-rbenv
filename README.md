@@ -5,13 +5,16 @@ cookbook.
 
 See: [cookbooks/rbenv-wrapper/recipes/default.rb](cookbooks/rbenv-wrapper/recipes/default.rb)
 
-# Notes
+# Requirements
 
-You must install the vagrant-berkshelf plugin: http://berkshelf.com/
+You need berkshelf and the vagrant-berkshelf plugin: http://berkshelf.com/
 
-```vagrant plugin install vagrant-berkshelf --plugin-version 2.0.1```
+```
+gem install berkshelf
+vagrant plugin install vagrant-berkshelf --plugin-version 2.0.1
+```
 
-Note I had to apply this patch to get it working correctly:
+Note I had to apply this patch to get `vagrant-berkshelf` working correctly:
 
 https://github.com/berkshelf/vagrant-berkshelf/pull/195
 
