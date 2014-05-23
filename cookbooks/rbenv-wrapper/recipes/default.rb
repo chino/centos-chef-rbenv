@@ -37,10 +37,12 @@ def install_plugin name, git_url, git_ref="master"
 	end
 end
 
+# https://github.com/sstephenson/rbenv/wiki/Plugins
 [
-	"https://github.com/carsomyr/rbenv-bundler",       # never type `bundle exec` again
+	"https://github.com/ianheggie/rbenv-binstubs",     # never type `bundle exec` again
 	"https://github.com/sstephenson/rbenv-gem-rehash", # auto rehash after gem (un)install
 	"https://github.com/sstephenson/rbenv-vars",       # global & project specific env vars
+	"https://github.com/chriseppstein/rbenv-each",     # run cmd across all installed rubies
 ].each do |url|
 	install_plugin url.split('/').last, url
 end
