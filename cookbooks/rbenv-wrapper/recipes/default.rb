@@ -1,7 +1,6 @@
-include_recipe 'rbenv::default'     # system wide install
-include_recipe 'rbenv::ohai_plugin' # add rbenv info to ohai
-include_recipe 'rbenv::ruby_build'  # enable rbenv_ruby
-include_recipe 'rbenv::rbenv_vars'  # install plugin
+include_recipe 'rbenv::default'     # install rbenv system wide
+include_recipe 'rbenv::ohai_plugin' # add rbenv info to ohai (global ruby install paths)
+include_recipe 'rbenv::ruby_build'  # enable rbenv_ruby lwrp (used below)
 
 include_recipe 'java' # for jruby
 
@@ -39,8 +38,9 @@ def install_plugin name, git_url, git_ref="master"
 end
 
 [
-	"https://github.com/carsomyr/rbenv-bundler", # never type `bundle exec` again
-	"https://github.com/sstephenson/rbenv-gem-rehash" # auto rehash after gem (un)install
+	"https://github.com/carsomyr/rbenv-bundler",       # never type `bundle exec` again
+	"https://github.com/sstephenson/rbenv-gem-rehash", # auto rehash after gem (un)install
+	"https://github.com/sstephenson/rbenv-vars",       # global & project specific env vars
 ].each do |url|
 	install_plugin url.split('/').last, url
 end
