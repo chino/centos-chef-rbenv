@@ -1,4 +1,4 @@
-# rbenv cookbook example on centos 5.9 and 6.4
+# rbenv cookbook example usage
 
 Installs a recent version of ruby to centos 5.9 and 6.4 using the rbenv
 cookbook.
