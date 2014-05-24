@@ -22,7 +22,7 @@ file "/etc/gemrc" do
 	content "gem: --no-ri --no-rdoc"
 end
 
-# https://github.com/sstephenson/rbenv/issues/591
+# https://github.com/RiotGames/rbenv-cookbook/issues/101
 def install_plugin name, git_url, git_ref="master"
 	include_recipe "git"
 	plugin_path = "#{node[:rbenv][:root]}/plugins/#{name}"
