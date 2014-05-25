@@ -42,8 +42,10 @@ Vagrant.configure("2") do |config|
         # but you also need RBENV_ROOT set
         # if you want `sudo rbenv versions`
         # and other commands to also work
+        # plus RBENV_VERSION to override
+        # which ruby we're using.
         "
-          echo 'Defaults env_keep += \"RBENV_ROOT\"' |
+          echo 'Defaults env_keep += \"RBENV_ROOT RBENV_VERSION\"' |
             sudo tee -a /etc/sudoers
         "
       ].join("\n")
