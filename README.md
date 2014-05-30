@@ -9,14 +9,13 @@ See: [cookbooks/rbenv-wrapper/recipes/default.rb](cookbooks/rbenv-wrapper/recipe
 
 You need berkshelf and the vagrant-berkshelf plugin: http://berkshelf.com/
 
-```
+```bash
 gem install berkshelf
 vagrant plugin install vagrant-berkshelf --plugin-version 2.0.1
 ```
 
 # Usage
 
-```
-berks install # install cookbooks/* and deps to ~/.berkshelf
-vagrant up # start (and provision) VMs
-```
+Run `berks install` to install `cookbooks/*` and their *dependencies* to the `~/.berkshelf`.
+
+Then `vagrant up` to start/provision the VMs.
