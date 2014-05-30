@@ -14,11 +14,9 @@ gem install berkshelf
 vagrant plugin install vagrant-berkshelf --plugin-version 2.0.1
 ```
 
-Note I had to apply this patch to get `vagrant-berkshelf` working correctly:
-
-https://github.com/berkshelf/vagrant-berkshelf/pull/195
+# Usage
 
 ```
-sed -i 's/cookbooks_path /&+/g' \
-  ~/.vagrant.d/gems/gems/vagrant-berkshelf-2.0.1/lib/berkshelf/vagrant/action/configure_chef.rb
+berks install # install cookbooks/* and deps to ~/.berkshelf
+vagrant up # start (and provision) VMs
 ```
